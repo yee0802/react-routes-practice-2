@@ -1,9 +1,8 @@
-# React Routes Practice 2
+# React + Vite
 
-## Instructions
-- In `App.js`, add a route for “products/:id/edit”
-- In `ProductsPage.js` add an “Edit” link for each product
-- In `EditProduct.js` use the location object to access the product data and populate the form
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Extension 1
-- In the `handleSubmit` method in `EditProduct.js`, update the products list with the edited product.
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
