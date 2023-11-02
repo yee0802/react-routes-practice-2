@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Route, Routes } from 'react-router';
-import { Link } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import { appsData, productsData } from './data.js';
 import Home from './pages/Home/Home';
 import ProductsPage from './pages/Products/ProductsPage';

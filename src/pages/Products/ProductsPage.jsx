@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 function ProductsPage(props) {
   console.log("Inside ProductsPage: ", { props });
@@ -17,8 +17,8 @@ function ProductsPage(props) {
               <Link to={`/products/${product.id}`} state={{ product }}>
                 View Product
               </Link>
-              {/* 
-                TODO: Add a link to the edit page here 
+              {/*
+                TODO: Add a link to the edit page here
                 Pass the product data as state in the link, just
                 like we are doing for the view product link above
               */}
