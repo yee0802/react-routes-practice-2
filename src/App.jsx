@@ -5,6 +5,8 @@ import Home from './pages/Home/Home';
 import ProductsPage from './pages/Products/ProductsPage';
 import ViewProductPage from './pages/ViewProduct/ViewProductPage';
 import './App.css'
+import EditProductPage from './pages/EditProduct/EditProduct.jsx';
+import AppsPage from './pages/Apps/index.jsx';
 
 export default function App() {
   const [products, setProducts] = useState(productsData);
@@ -22,19 +24,19 @@ export default function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
+              <Link to="/apps">Apps</Link>
+            </li>
+            <li>
               <Link to="/products">Products</Link>
             </li>
           </ul>
         </nav>
       </header>
       <Routes>
-        {/*
-         TODO: add your route for editing a product here. The
-         Route should be /products/:id/edit and it should use
-         the EditProduct element
-         */}
+        <Route path='/products/:id/edit' element={<EditProductPage />}></Route>
         <Route path="/products/:id" element={<ViewProductPage />} />
         <Route path="/products" element={<ProductsPage products={products} />}/>
+        <Route path='/apps' element={<AppsPage apps={apps}/>}></Route>
         <Route path="/" element={<Home />} />
       </Routes>
     </div>
