@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function EditProductPage(props) {
 
   const [productToUpdate, setProductToUpdate] = useState(null);
 
-  console.log({ productToUpdate });
+  const { products, setProducts } = props
 
   const location = useLocation();
+  const navigation = useNavigate();
 
   useEffect(() => {
     if (location.state) {
@@ -25,6 +26,9 @@ function EditProductPage(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
+
+    const filteredProducts = products.map(product => product.id === productToUpdate.id ? {...productToUpdate, name: productToUpdate.name } : product);
+    setProducts([...filteredProducts]);
   }
 
   if (!productToUpdate) return <div>Loading...</div>;
@@ -40,6 +44,7 @@ function EditProductPage(props) {
         value={productToUpdate.name}
       />
       <button type="submit">Edit</button>
+      <button onClick={() => navigation(-1)}>Go back</button>
     </form>
   );
 }

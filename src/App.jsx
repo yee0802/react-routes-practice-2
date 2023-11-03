@@ -33,7 +33,7 @@ export default function App() {
         </nav>
       </header>
       <Routes>
-        <Route path='/products/:id/edit' element={<EditProductPage />}></Route>
+        <Route path='/products/:id/edit' element={<EditProductPage products={products} setProducts={setProducts}/>}></Route>
         <Route path="/products/:id" element={<ViewProductPage />} />
         <Route path="/products" element={<ProductsPage products={products} />}/>
         <Route path='/apps' element={<AppsPage apps={apps}/>}></Route>

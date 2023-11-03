@@ -17,6 +17,7 @@ function ProductsPage(props) {
               <Link to={`/products/${product.id}`} state={{ product }}>
                 View Product
               </Link>
+              <br />
               <Link to={`/products/${product.id}/edit`} state={{ product }}>Edit</Link>
             </li>
           );
