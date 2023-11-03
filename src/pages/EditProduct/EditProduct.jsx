@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 function EditProductPage(props) {
 
@@ -7,8 +7,8 @@ function EditProductPage(props) {
   console.log({ productToUpdate });
 
   //TODO: Write code to set the productToUpdateState
-  //with the product data from the location. 
-  // 
+  //with the product data from the location.
+  //
   //Use useEffect so that when the location changes
   //you get the product data from the location. See
   //ViewProductPage.js to check
